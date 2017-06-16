@@ -18,8 +18,9 @@ import com.cn.hnust.service.UserService;
 public class TestMyBatis {  
    private static Logger logger = Logger.getLogger(TestMyBatis.class);  
 // private ApplicationContext ac = null;  
+   
    @Resource  
-   private UserService userService = null;  
+   private UserService userService;  
  
 // @Before  
 // public void before() {  
