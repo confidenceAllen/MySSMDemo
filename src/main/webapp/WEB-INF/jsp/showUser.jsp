@@ -14,6 +14,7 @@
 	</c:forEach> --%>
 	
 	<h1>${user.name }</h1>
+    <a href="user/addbook.do">添加书本</a>
    
   </body>  
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
