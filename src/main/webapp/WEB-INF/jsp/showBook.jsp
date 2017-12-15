@@ -6,12 +6,9 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="${ctx}/user/saveBook.shtml">
-    id:<input type="text" name="id">
-    name:<input type="text" name="name" id="">
-        <button type="submit">submit</button>
-    </form>
+    <c:forEach items="${books}" var="var">
 
-    <a href="${ctx}/user/showBook.shtml?name=da">展示1的书本</a>
+        ${var.name}
+    </c:forEach>
 </body>
 </html>

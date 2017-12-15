@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/wenjuan_ht.css">
     <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
 </head>
-<form action="user/showUser.do" id="formid">
+<form action="user/showUser.shtml" id="formid">
 		输入Id:<input name="id">
 </form>
 

@@ -1,9 +1,13 @@
 package com.cn.hnust.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 
 @TableName("book")
 public class Book {
+
+    @TableId(value="id", type= IdType.AUTO)
     private Integer id;
     private String name;
 

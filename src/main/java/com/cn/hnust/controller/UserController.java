@@ -1,6 +1,7 @@
 
 package com.cn.hnust.controller;
-      
+
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.cn.hnust.pojo.Book;
 import com.cn.hnust.pojo.User;
 import com.cn.hnust.service.BookService;
@@ -10,13 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-      
-    @Controller  
+import java.util.List;
+
+@Controller
     @RequestMapping("/user")  
     public class UserController {  
-        @Resource  
+        @Autowired
         private UserService userService;
 
         @Autowired
@@ -25,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
         @RequestMapping("/showUser")  
         public String toIndex(HttpServletRequest request,Model model){  
             int userId = Integer.parseInt(request.getParameter("id"));  
-            User user = this.userService.getUserById(userId);  
+            User user = userService.getUserById(userId);
             model.addAttribute("user", user);  
             return "showUser";  
         }
@@ -41,6 +42,20 @@ import javax.servlet.http.HttpServletRequest;
             System.out.println(book);
             bookService.insert(book);
             return "showUser";
+        }
+
+        @RequestMapping("/showBook")
+        public String showBook(HttpServletRequest request, Model model, Book book){
+
+            EntityWrapper<Book> ew = new EntityWrapper<Book>();
+            System.out.print(request.getParameter("name"));
+            ew.like("name",request.getParameter("name"))
+                    ;
+            System.out.println(ew.getSqlSegment());
+            List<Book> list = bookService.selectList(ew);
+            request.setAttribute("books",bookService.selectList(ew));
+           /* System.out.println(list.get(0).getName());*/
+            return "showBook";
         }
 
         @RequestMapping("/formData")  

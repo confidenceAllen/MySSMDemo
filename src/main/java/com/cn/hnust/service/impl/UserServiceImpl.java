@@ -1,15 +1,14 @@
- package com.cn.hnust.service.impl;  
-  
-import javax.annotation.Resource;  
-  
-import org.springframework.stereotype.Service;  
-  
-import com.cn.hnust.dao.UserDao;  
-import com.cn.hnust.pojo.User;  
-import com.cn.hnust.service.UserService;  
+ package com.cn.hnust.service.impl;
+
+import com.cn.hnust.dao.UserDao;
+import com.cn.hnust.pojo.User;
+import com.cn.hnust.service.UserService;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
   
 @Service("userService")  
-public class UserServiceImpl implements UserService {  
+public class UserServiceImpl implements UserService {
     @Resource  
     private UserDao userDao;  
     @Override  
