@@ -2,8 +2,8 @@
 package com.cn.hnust.controller;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.cn.hnust.pojo.Book;
-import com.cn.hnust.pojo.User;
+import com.cn.hnust.entity.Book;
+import com.cn.hnust.entity.User;
 import com.cn.hnust.service.BookService;
 import com.cn.hnust.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

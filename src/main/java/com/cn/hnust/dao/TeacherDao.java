@@ -1,6 +1,6 @@
 package com.cn.hnust.dao;
 
-import com.cn.hnust.pojo.Teacher;
+import com.cn.hnust.entity.Teacher;
 
 public interface TeacherDao {
     int deleteByPrimaryKey(Integer teacherid);

@@ -1,7 +1,7 @@
 package com.cn.hnust.test;
 
 import com.alibaba.fastjson.JSON;
-import com.cn.hnust.pojo.User;
+import com.cn.hnust.entity.User;
 import com.cn.hnust.service.UserService;
 import org.apache.log4j.Logger;
 import org.junit.Test;

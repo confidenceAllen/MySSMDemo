@@ -1,7 +1,7 @@
  package com.cn.hnust.service.impl;
 
 import com.cn.hnust.dao.UserDao;
-import com.cn.hnust.pojo.User;
+import com.cn.hnust.entity.User;
 import com.cn.hnust.service.UserService;
 import org.springframework.stereotype.Service;
 

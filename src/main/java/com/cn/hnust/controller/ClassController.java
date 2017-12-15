@@ -19,7 +19,7 @@ public class ClassController {
      @RequestMapping("/showClazz")
      public String toIndex(HttpServletRequest request,Model model){  
          int classid = Integer.parseInt(request.getParameter("id"));  
-         com.cn.hnust.pojo.Class clazz = this.classService.getClazz(classid);  
+         com.cn.hnust.entity.Class clazz = this.classService.getClazz(classid);
          model.addAttribute("user", clazz);  
          return "showUser";  
      }  

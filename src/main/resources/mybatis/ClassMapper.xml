@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cn.hnust.dao.ClassDao" >
-  <resultMap id="BaseResultMap" type="com.cn.hnust.pojo.Class" >
+  <resultMap id="BaseResultMap" type="com.cn.hnust.entity.Class" >
     <id column="classid" property="classid" jdbcType="INTEGER" />
     <result column="classname" property="classname" jdbcType="VARCHAR" />
     <result column="teacherid" property="teacherid" jdbcType="VARCHAR" />
     <collection property="studentList" select="getStudentList" column="classid"></collection>
   </resultMap>
   
-  <resultMap id="StudentMap" type="com.cn.hnust.pojo.Student" >
+  <resultMap id="StudentMap" type="com.cn.hnust.entity.Student" >
     <id column="studentid" property="studentid" jdbcType="INTEGER" />
     <result column="studentname" property="studentname" jdbcType="VARCHAR" />
     <result column="teacherid" property="teacherid" jdbcType="INTEGER" />
@@ -38,13 +38,13 @@
     delete from class
     where classid = #{classid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.cn.hnust.pojo.Class" >
+  <insert id="insert" parameterType="com.cn.hnust.entity.Class" >
     insert into class (classid, classname, teacherid
       )
     values (#{classid,jdbcType=INTEGER}, #{classname,jdbcType=VARCHAR}, #{teacherid,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.cn.hnust.pojo.Class" >
+  <insert id="insertSelective" parameterType="com.cn.hnust.entity.Class" >
     insert into class
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="classid != null" >
@@ -69,7 +69,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.cn.hnust.pojo.Class" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.hnust.entity.Class" >
     update class
     <set >
       <if test="classname != null" >
@@ -81,7 +81,7 @@
     </set>
     where classid = #{classid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.cn.hnust.pojo.Class" >
+  <update id="updateByPrimaryKey" parameterType="com.cn.hnust.entity.Class" >
     update class
     set classname = #{classname,jdbcType=VARCHAR},
       teacherid = #{teacherid,jdbcType=VARCHAR}

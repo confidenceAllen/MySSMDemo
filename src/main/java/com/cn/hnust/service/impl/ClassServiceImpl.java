@@ -7,8 +7,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.cn.hnust.dao.ClassDao;
-import com.cn.hnust.pojo.Class;
-import com.cn.hnust.pojo.Student;
+import com.cn.hnust.entity.Class;
+import com.cn.hnust.entity.Student;
 import com.cn.hnust.service.ClassService;
 
 @Service("classService")

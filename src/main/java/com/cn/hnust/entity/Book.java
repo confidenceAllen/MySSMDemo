@@ -1,4 +1,4 @@
-package com.cn.hnust.pojo;
+package com.cn.hnust.entity;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;

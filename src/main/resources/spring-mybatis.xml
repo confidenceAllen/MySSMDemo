@@ -37,7 +37,7 @@
         <!-- 自动扫描mapping.xml文件 -->  
         <property name="mapperLocations" value="classpath:mybatis/*.xml" ></property>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
-        <property name="typeAliasesPackage" value="com.cn.hnust.pojo"/>
+        <property name="typeAliasesPackage" value="com.cn.hnust.entity"/>
         <property name="plugins">
             <array>
                 <!-- 分页插件配置 -->

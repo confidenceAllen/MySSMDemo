@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cn.hnust.dao.StudentDao" >
-  <resultMap id="BaseResultMap" type="com.cn.hnust.pojo.Student" >
+  <resultMap id="BaseResultMap" type="com.cn.hnust.entity.Student" >
     <id column="studentid" property="studentid" jdbcType="INTEGER" />
     <result column="studentname" property="studentname" jdbcType="VARCHAR" />
     <result column="teacherid" property="teacherid" jdbcType="INTEGER" />
@@ -20,13 +20,13 @@
     delete from student
     where studentid = #{studentid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.cn.hnust.pojo.Student" >
+  <insert id="insert" parameterType="com.cn.hnust.entity.Student" >
     insert into student (studentid, studentname, teacherid, 
       classid)
     values (#{studentid,jdbcType=INTEGER}, #{studentname,jdbcType=VARCHAR}, #{teacherid,jdbcType=INTEGER}, 
       #{classid,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.cn.hnust.pojo.Student" >
+  <insert id="insertSelective" parameterType="com.cn.hnust.entity.Student" >
     insert into student
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="studentid != null" >
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.cn.hnust.pojo.Student" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.hnust.entity.Student" >
     update student
     <set >
       <if test="studentname != null" >
@@ -72,7 +72,7 @@
     </set>
     where studentid = #{studentid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.cn.hnust.pojo.Student" >
+  <update id="updateByPrimaryKey" parameterType="com.cn.hnust.entity.Student" >
     update student
     set studentname = #{studentname,jdbcType=VARCHAR},
       teacherid = #{teacherid,jdbcType=INTEGER},
