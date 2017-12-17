@@ -147,13 +147,13 @@ layui.config({
 			title : false,
 			type : 1,
 			content : '	<div class="admin-header-lock" id="lock-box">'+
-							'<div class="admin-header-lock-img"><img src="images/face.jpg"/></div>'+
+							'<div class="admin-header-lock-img"><img src="images/userface4.jpg"/></div>'+
 							'<div class="admin-header-lock-name" id="lockUserName">请叫我马哥</div>'+
 							'<div class="input_btn">'+
 								'<input type="password" class="admin-header-lock-input layui-input" autocomplete="off" placeholder="请输入密码解锁.." name="lockPwd" id="lockPwd" />'+
 								'<button class="layui-btn" id="unlock">解锁</button>'+
 							'</div>'+
-							'<p>电脑密码！！！</p>'+
+							'<p style="color: red">密码123！！！</p>'+
 						'</div>',
 			closeBtn : 0,
 			shade : 0.9
@@ -174,7 +174,7 @@ layui.config({
 			layer.msg("请输入解锁密码！");
 			$(this).siblings(".admin-header-lock-input").focus();
 		}else{
-			if($(this).siblings(".admin-header-lock-input").val() == "123456"){
+			if($(this).siblings(".admin-header-lock-input").val() == "123"){
 				window.sessionStorage.setItem("lockcms",false);
 				$(this).siblings(".admin-header-lock-input").val('');
 				layer.closeAll("page");
@@ -223,7 +223,8 @@ layui.config({
 	        id: 'LAY_layuipro',
 	        btn: ['火速围观'],
 	        moveType: 1,
-	        content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p>最近偶然发现贤心大神的layui框架，瞬间被他的完美样式所吸引，虽然功能不算强大，但毕竟是一个刚刚出现的框架，后面会慢慢完善的。很早之前就想做一套后台模版，但是感觉bootstrop代码的冗余太大，不是非常喜欢，自己写又太累，所以一直闲置了下来。直到遇到了layui我才又燃起了制作一套后台模版的斗志。由于本人只是纯前端，所以页面只是单纯的实现了效果，没有做服务器端的一些处理，可能后期技术跟上了会更新的，如果有什么问题欢迎大家指导。谢谢大家。</p><p>在此特别感谢Beginner和Paco，他们写的框架给了我很好的启发和借鉴。希望有时间可以多多请教。</p></div>',
+	        content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p>' +
+			'系统使用layui作为前台展示页面、爬虫作为数据支撑、mybatis-plus作为持久化数据框架、后续增加shrio作为权限控制。完善这个初始化demo</p></div>',
 	        success: function(layero){
 				var btn = layero.find('.layui-layer-btn');
 				btn.css('text-align', 'center');
