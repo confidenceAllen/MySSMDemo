@@ -11,7 +11,7 @@
 },{
 	"title" : "友情链接",
 	"icon" : "&#xe64c;",
-	"href" : "page/links/linksList.html",
+	"href" : "/MyMaven/page/links/linksList.shtml",
 	"spread" : false
 },{
 	"title" : "系统基本参数",

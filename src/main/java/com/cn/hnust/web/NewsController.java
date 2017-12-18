@@ -1,4 +1,4 @@
-package com.cn.hnust.controller;
+package com.cn.hnust.web;
 
 import com.cn.hnust.common.AjaxData;
 import org.springframework.stereotype.Controller;
@@ -23,8 +23,6 @@ public class NewsController extends BaseController{
 
     @RequestMapping("/getBaiduNewsList")
     public AjaxData getBaiduNewsList(){
-
-
         return ajaxData;
     }
 }

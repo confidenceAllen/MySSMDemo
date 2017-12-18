@@ -1,4 +1,4 @@
-package com.cn.hnust.dao;
+package com.cn.hnust.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.cn.hnust.entity.Book;

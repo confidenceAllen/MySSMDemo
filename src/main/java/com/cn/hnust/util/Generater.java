@@ -32,7 +32,8 @@ public class Generater {
         AutoGenerator mpg = new AutoGenerator();
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("F://");
+        /*com包的地址--F:\GitHub\MySSMDemo\src\main\java*/
+        gc.setOutputDir("F:\\GitHub\\MySSMDemo\\src\\main\\java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
@@ -112,7 +113,7 @@ public class Generater {
 
         // 自定义 xxList.jsp 生成
        List<FileOutConfig> focList = new ArrayList<FileOutConfig>();
-         focList.add(new FileOutConfig("/template/list.jsp.vm") {
+/*         focList.add(new FileOutConfig("/template/list.jsp.vm") {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
@@ -120,13 +121,14 @@ public class Generater {
             }
         });
         cfg.setFileOutConfigList(focList);
-        mpg.setCfg(cfg);
+        mpg.setCfg(cfg);*/
 
         // 调整 xml 生成目录演示
         focList.add(new FileOutConfig("/templates/mapper.xml.vm") {
             @Override
             public String outputFile(TableInfo tableInfo) {
-                return "/mybatis/" + tableInfo.getEntityName() + ".xml";
+                /*我的项目地址--F:\GitHub\MySSMDemo\src\main\resources\mybatis*/
+                return "/GitHub/MySSMDemo/src/main/resources/mybatis/" + tableInfo.getEntityName() + "Mapping.xml";
             }
         });
         cfg.setFileOutConfigList(focList);
@@ -135,6 +137,7 @@ public class Generater {
         // 关闭默认 xml 生成，调整生成 至 根目录
         TemplateConfig tc = new TemplateConfig();
         tc.setXml(null);
+        tc.setController(null);
         mpg.setTemplate(tc);
 
         // 自定义模板配置，可以 copy 源码 mybatis-plus/src/main/resources/templates 下面内容修改，

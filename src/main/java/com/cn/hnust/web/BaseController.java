@@ -1,4 +1,4 @@
-package com.cn.hnust.controller;
+package com.cn.hnust.web;
 
 import com.cn.hnust.common.AjaxData;
 
