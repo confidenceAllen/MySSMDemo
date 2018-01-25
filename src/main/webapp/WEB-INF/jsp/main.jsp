@@ -30,7 +30,7 @@
         </a>
     </div>
     <div class="panel col">
-        <a href="javascript:;" data-url="/MyMaven/page/sysUser/userList.shtml">
+        <a href="javascript:;" data-url="../page/sysUser/userList.shtml">
             <div class="panel_icon" style="background-color:#FF5722;">
                 <i class="iconfont icon-dongtaifensishu" data-icon="icon-dongtaifensishu"></i>
             </div>
@@ -41,7 +41,7 @@
         </a>
     </div>
     <div class="panel col">
-        <a href="javascript:;" data-url="/MyMaven/page/sysUser/userList.shtml">
+        <a href="javascript:;" data-url="../page/sysUser/userList.shtml">
             <div class="panel_icon" style="background-color:#009688;">
                 <i class="layui-icon" data-icon="&#xe613;">&#xe613;</i>
             </div>
@@ -74,7 +74,7 @@
         </a>
     </div>
     <div class="panel col max_panel">
-        <a href="javascript:;" data-url="/MyMaven/page/news/newsList.shtml">
+        <a href="javascript:;" data-url="../page/news/newsList.shtml">
             <div class="panel_icon" style="background-color:#2F4056;">
                 <i class="iconfont icon-text" data-icon="icon-text"></i>
             </div>

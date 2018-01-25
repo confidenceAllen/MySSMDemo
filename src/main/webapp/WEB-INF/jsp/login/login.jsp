@@ -22,9 +22,9 @@
 <div class="video_mask"></div>
 <div class="login">
     <h1>layuiCMS-管理登录</h1>
-    <form class="layui-form">
+    <form class="layui-form" id="login">
         <div class="layui-form-item">
-            <input class="layui-input" name="username" placeholder="用户名" lay-verify="required" type="text" autocomplete="off">
+            <input class="layui-input" name="account" placeholder="登录账号" lay-verify="required" type="text" autocomplete="off">
         </div>
         <div class="layui-form-item">
             <input class="layui-input" name="password" placeholder="密码" lay-verify="required" type="password" autocomplete="off">
@@ -36,6 +36,8 @@
         <button class="layui-btn login_btn" lay-submit="" lay-filter="login">登录</button>
     </form>
 </div>
+
+
 <script type="text/javascript" src="${ctx}/js/common/layui/layui.js"></script>
 <script type="text/javascript" src="${ctx}/js/login/login.js"></script>
 </body>

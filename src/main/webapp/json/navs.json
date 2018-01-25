@@ -1,17 +1,17 @@
 [{
 	"title" : "后台首页",
 	"icon" : "icon-computer",
-	"href" : "/MyMaven/page/main.shtml",
+	"href" : "../page/main.shtml",
 	"spread" : false
 },{
 	"title" : "文章列表",
 	"icon" : "icon-text",
-	"href" : "/MyMaven/page/news/newsList.shtml",
+	"href" : "../page/news/newsList.shtml",
 	"spread" : false
 },{
 	"title" : "友情链接",
 	"icon" : "&#xe64c;",
-	"href" : "/MyMaven/page/links/linksList.shtml",
+	"href" : "../page/links/linksList.shtml",
 	"spread" : false
 },{
 	"title" : "系统基本参数",
@@ -27,13 +27,13 @@
 		{
 			"title" : "404页面",
 			"icon" : "&#xe61c;",
-			"href" : "/MyMaven/page/404.shtml",
+			"href" : "../page/404.shtml",
 			"spread" : false
 		},
 		{
 			"title" : "登录",
 			"icon" : "&#xe609;",
-			"href" : "/MyMaven/login.shtml",
+			"href" : "../login.shtml",
 			"spread" : false,
 			"target" : "_blank"
 		}

@@ -24,7 +24,7 @@ public class LoginController extends BaseController {
         return "login/login";
     }
 
-    @RequestMapping("loginIn")
+    @RequestMapping("logIn")
     @ResponseBody
     public Map<String, Object> submitLogin(SysUser entity, HttpServletRequest request){
         String url = null ;
