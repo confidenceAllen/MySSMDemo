@@ -91,7 +91,7 @@ public class Generater {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.cn.hnust");
+        pc.setParent("com.cn.by");
         pc.setModuleName("person");
         mpg.setPackageInfo(pc);
 

@@ -1,8 +1,6 @@
-package com.cn.hnust.test;
+package com.cn.by.test;
 
 import com.alibaba.fastjson.JSON;
-import com.cn.hnust.entity.User;
-import com.cn.hnust.service.UserService;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
