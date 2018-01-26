@@ -15,6 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+
+/**
+* @author By
+* @date 2018/1/26 9:50
+* @description 登录控制器
+* @return
+*/
 @RequestMapping("login")
 @Controller
 public class LoginController extends BaseController {
@@ -70,5 +77,7 @@ public class LoginController extends BaseController {
 
         return resultMap;
     }
+
+
 
 }

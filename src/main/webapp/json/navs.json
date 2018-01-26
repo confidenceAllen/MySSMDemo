@@ -27,7 +27,7 @@
 		{
 			"title" : "404页面",
 			"icon" : "&#xe61c;",
-			"href" : "../page/404.shtml",
+			"href" : "../main/404.shtml",
 			"spread" : false
 		},
 		{
