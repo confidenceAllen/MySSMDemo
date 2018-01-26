@@ -6,6 +6,7 @@ import com.cn.by.service.SysRoleService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Set;
 
 /**
@@ -19,8 +20,11 @@ import java.util.Set;
 @Service
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleDao, SysRole> implements SysRoleService {
 
+    @Resource
+    private SysRoleDao sysRoleDao;
+
     @Override
     public Set<String> findRoleTypeByUserId(Integer userId) {
-        return null;
+        return sysRoleDao.findRoleTypeByUserId(userId);
     }
 }

@@ -11,4 +11,8 @@
         <result column="create_time" property="createTime" />
     </resultMap>
 
+    <select id="findRoleTypeByUserId" resultType="java.lang.String">
+        select r.role_type from SYS_ROLE r,SYS_USER_ROLE ur where ur.ROLE_ID = r.role_id and ur.USER_ID = #{userId}
+    </select>
+
 </mapper>

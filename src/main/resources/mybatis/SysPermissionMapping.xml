@@ -13,4 +13,10 @@
         <result column="NOTE" property="note" />
     </resultMap>
 
+    <!-- 根据用ID查询permission -->
+    <select id="findPermissionByUserId" resultType="java.lang.String">
+        select p.permission_url from sys_permission p , sys_role_permission rp, sys_user_role ur
+        where ur.user_id =#{userId} and p.permission_id = rp.permission_id and rp.role_id = ur.role_id
+    </select>
+
 </mapper>

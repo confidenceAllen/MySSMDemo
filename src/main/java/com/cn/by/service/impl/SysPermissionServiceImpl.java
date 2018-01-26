@@ -6,6 +6,7 @@ import com.cn.by.service.SysPermissionService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Set;
 
 /**
@@ -19,8 +20,11 @@ import java.util.Set;
 @Service
 public class SysPermissionServiceImpl extends ServiceImpl<SysPermissionDao, SysPermission> implements SysPermissionService {
 
+    @Resource
+    private SysPermissionDao sysPermissionDao;
+
     @Override
     public Set<String> findPermissionByUserId(Integer userId) {
-        return null;
+        return sysPermissionDao.findPermissionByUserId(userId);
     }
 }
