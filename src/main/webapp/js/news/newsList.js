@@ -1,7 +1,7 @@
 layui.config({
 	base : "js/"
 }).use(['form','layer','jquery','laypage'],function(){
-	var form = layui.form(),
+	var form = layui.form,
 		layer = parent.layer === undefined ? layui.layer : parent.layer,
 		laypage = layui.laypage,
 		$ = layui.jquery;
@@ -113,7 +113,7 @@ layui.config({
 			var index = layui.layer.open({
 				title : "添加文章",
 				type : 2,
-				content : "../page/news/newsAdd.shtml",
+				content : "/page/news/newsAdd.shtml",
 				success : function(layero, index){
 					setTimeout(function(){
 						layui.layer.tips('点击此处返回文章列表', '.layui-layer-setwin .layui-layer-close', {
@@ -277,9 +277,9 @@ layui.config({
 			    	+'<td><input type="checkbox" name="show" lay-skin="switch" lay-text="是|否" lay-filter="isShow"'+currData[i].isShow+'></td>'
 			    	+'<td>'+currData[i].newsTime+'</td>'
 			    	+'<td>'
-					+  '<a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
-					+  '<a class="layui-btn layui-btn-normal layui-btn-mini news_collect"><i class="layui-icon">&#xe600;</i> 收藏</a>'
-					+  '<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="'+data[i].newsId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
+					+  '<a class="layui-btn layui-btn-sm news_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
+					+  '<a class="layui-btn layui-btn-normal layui-btn-sm news_collect"><i class="layui-icon">&#xe600;</i> 收藏</a>'
+					+  '<a class="layui-btn layui-btn-danger layui-btn-sm news_del" data-id="'+data[i].newsId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
 			        +'</td>'
 			    	+'</tr>';
 				}
@@ -294,8 +294,8 @@ layui.config({
 		if(that){
 			newsData = that;
 		}
-		laypage({
-			cont : "page",
+        laypage.render({
+			count : "page",
 			pages : Math.ceil(newsData.length/nums),
 			jump : function(obj){
 				$(".news_content").html(renderDate(newsData,obj.curr));

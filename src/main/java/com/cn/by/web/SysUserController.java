@@ -23,5 +23,8 @@ public class SysUserController {
         return "user/addUser";
     }
 
-
+    @RequestMapping("/userInfo")
+    public String userInfo(){
+        return "user/userInfo";
+    }
 }

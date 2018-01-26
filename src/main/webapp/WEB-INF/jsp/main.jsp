@@ -4,6 +4,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
+    <jsp:include page="common.jsp"></jsp:include>
     <meta charset="utf-8">
     <title>首页后台管理模板</title>
     <meta name="renderer" content="webkit">
@@ -12,9 +13,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="${ctx}/js/common/layui/css/layui.css" media="all" />
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
-    <link rel="stylesheet" href="${ctx}/css/main.css" media="all" />
 </head>
 <body class="childrenBody">
 <div class="panel_box row">
@@ -146,7 +144,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="${ctx}/js/common/layui/layui.js"></script>
 <script type="text/javascript" src="${ctx}/js/main.js"></script>
 </body>
 </html>

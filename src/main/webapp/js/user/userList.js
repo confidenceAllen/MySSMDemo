@@ -1,7 +1,7 @@
 layui.config({
     base : "js/"
 }).use(['form','layer','jquery','laypage'],function(){
-    var form = layui.form(),
+    var form = layui.form,
         layer = parent.layer === undefined ? layui.layer : parent.layer,
         laypage = layui.laypage,
         $ = layui.jquery;
@@ -189,8 +189,8 @@ layui.config({
                         +  '<td>'+currData[i].userStatus+'</td>'
                         +  '<td>'+currData[i].userEndTime+'</td>'
                         +  '<td>'
-                        +    '<a class="layui-btn layui-btn-mini users_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
-                        +    '<a class="layui-btn layui-btn-danger layui-btn-mini users_del" data-id="'+data[i].usersId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
+                        +    '<a class="layui-btn layui-btn-sm users_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
+                        +    '<a class="layui-btn layui-btn-danger layui-btn-sm users_del" data-id="'+data[i].usersId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
                         +  '</td>'
                         +'</tr>';
                 }
@@ -202,8 +202,8 @@ layui.config({
 
         //分页
         var nums = 13; //每页出现的数据量
-        laypage({
-            cont : "page",
+        laypage.render({
+            count : "page",
             pages : Math.ceil(usersData.length/nums),
             jump : function(obj){
                 $(".users_content").html(renderDate(usersData,obj.curr));

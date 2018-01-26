@@ -66,6 +66,9 @@
     </servlet-mapping>  
     <welcome-file-list>  
         <welcome-file>/main.shtml</welcome-file>
-    </welcome-file-list>  
+    </welcome-file-list>
+    <error-page>
+        <location>/main/404.shtml</location>
+    </error-page>
   
 </web-app>

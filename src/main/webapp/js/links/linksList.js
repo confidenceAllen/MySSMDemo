@@ -1,7 +1,7 @@
 layui.config({
 	base : "js/"
 }).use(['form','layer','jquery','laypage'],function(){
-	var form = layui.form(),
+	var form = layui.form,
 		layer = parent.layer === undefined ? layui.layer : parent.layer,
 		laypage = layui.laypage,
 		$ = layui.jquery;
@@ -194,8 +194,8 @@ layui.config({
 			    	+'<td>'+currData[i].linksTime+'</td>'
 			    	+'<td>'+currData[i].showAddress+'</td>'
 			    	+'<td>'
-					+  '<a class="layui-btn layui-btn-mini links_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
-					+  '<a class="layui-btn layui-btn-danger layui-btn-mini links_del" data-id="'+data[i].linksId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
+					+  '<a class="layui-btn layui-btn-sm links_edit"><i class="iconfont icon-edit"></i> 编辑</a>'
+					+  '<a class="layui-btn layui-btn-danger layui-btn-sm links_del" data-id="'+data[i].linksId+'"><i class="layui-icon">&#xe640;</i> 删除</a>'
 			        +'</td>'
 			    	+'</tr>';
 				}
@@ -210,8 +210,8 @@ layui.config({
 		if(that){
 			linksData = that;
 		}
-		laypage({
-			cont : "page",
+		laypage.render({
+			count : "page",
 			pages : Math.ceil(linksData.length/nums),
 			jump : function(obj){
 				$(".links_content").html(renderDate(linksData,obj.curr));

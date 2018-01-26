@@ -42,16 +42,6 @@
 </blockquote>
 <div class="layui-form news_list">
     <table class="layui-table">
-        <colgroup>
-            <col width="50">
-            <col>
-            <col width="9%">
-            <col width="9%">
-            <col width="9%">
-            <col width="9%">
-            <col width="9%">
-            <col width="15%">
-        </colgroup>
         <thead>
         <tr>
             <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
