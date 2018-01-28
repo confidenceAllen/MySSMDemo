@@ -1,8 +1,10 @@
 package com.cn.by.service;
 
+import com.cn.by.common.LayPage;
 import com.cn.by.entity.SysRole;
 import com.baomidou.mybatisplus.service.IService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Set;
 
 /**
@@ -16,4 +18,6 @@ import java.util.Set;
 public interface SysRoleService extends IService<SysRole> {
 
     Set<String> findRoleTypeByUserId(Integer userId);
+
+    LayPage<SysRole> pageList(HttpServletRequest request);
 }

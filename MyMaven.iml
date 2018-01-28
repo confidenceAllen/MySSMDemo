@@ -108,5 +108,16 @@
     <orderEntry type="library" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.5" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" level="project" />
+    <orderEntry type="library" name="Maven: com.bladejava:blade-mvc:2.0.6-BETA" level="project" />
+    <orderEntry type="library" name="Maven: com.bladejava:blade-asm:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.bladejava:blade-log:0.0.6" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.5" level="project" />
   </component>
 </module>

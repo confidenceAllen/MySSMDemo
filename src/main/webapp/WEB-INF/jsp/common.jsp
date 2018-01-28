@@ -11,3 +11,4 @@
 
 <%--js--%>
 <script type="text/javascript" src="${ctx}/js/common/layui/layui.js"></script>
+<script type="text/javascript" src="${ctx}/js/common.js"></script>
