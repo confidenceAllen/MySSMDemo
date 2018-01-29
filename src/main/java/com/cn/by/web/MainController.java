@@ -23,8 +23,5 @@ public class MainController {
         return "main";
     }
 
-    @RequestMapping("/404")
-    public String error_page(){
-        return "404";
-    }
+
 }

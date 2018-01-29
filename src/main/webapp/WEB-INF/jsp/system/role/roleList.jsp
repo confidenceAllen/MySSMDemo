@@ -1,6 +1,7 @@
 <%@ page contentType ="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="shrio" uri="http://shiro.apache.org/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -22,10 +23,10 @@
         <div class="layui-input-inline">
             <input type="text" value="" placeholder="请输入关键字" class="layui-input search_input">
         </div>
-        <a class="layui-btn search_btn">查询</a>
+        <shiro:hasPermission name="hello"><a class="layui-btn search_btn">查询</a></shiro:hasPermission>
     </div>
     <div class="layui-inline">
-        <a class="layui-btn layui-btn-normal usersAdd_btn">添加用户</a>
+        <a class="layui-btn layui-btn-normal" onclick="add()">添加用户</a>
     </div>
     <div class="layui-inline">
         <a class="layui-btn layui-btn-danger batchDel">批量删除</a>
@@ -33,6 +34,7 @@
     <div class="layui-inline">
         <div class="layui-form-mid layui-word-aux">　本页面刷新后除新添加的文章外所有操作无效，关闭页面所有数据重置</div>
     </div>
+    <div id="delete"></div>
 </blockquote>
 <div class="layui-form users_list">
     <table id="roleList" lay-filter="roleEvent"></table>
@@ -40,6 +42,11 @@
 <div id="page"></div>
 <script type="text/javascript" src="${ctx}/js/user/userList.js"></script>
 <script type="text/javascript">
+
+    function add() {
+        $('#delete').html('<AA>d</AA>')
+    }
+
     layui.use('table', function(){
         var table = layui.table;
 
@@ -56,7 +63,7 @@
                 ,{field: 'roleType', title: '角色类型'}
                 ,{field: 'sort', title: '排序字段'}
                 ,{field: 'createTime', title: '创建时间', sort: true,templet:function (d) {
-                    return new Date(d.createTime).Format("yyyy-MM-dd");
+                    return new Date(d.createTime).Format("yyyy-MM-dd hh:mm:ss");
                 }}
 //                ,{title:'操作', align:'center',fixed:'right', toolbar: '#bar',align:'center'} //这里的toolbar值是模板元素的选择器
             ]]
@@ -82,7 +89,7 @@
             active[type] ?active[type].call(this) :'';});
 
 //监听工具条
-        table.on('tool(userEvent)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+        table.on('tool(roleEvent)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值
             var tr = obj.tr; //获得当前行 tr 的DOM对象

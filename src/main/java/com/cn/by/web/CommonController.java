@@ -1,4 +1,4 @@
-package com.cn.by.common.shrio.controller;
+package com.cn.by.web;
 
 
 import javax.annotation.Resource;
@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.cn.by.common.shrio.controller.BaseController;
 import com.cn.by.common.shrio.token.manager.TokenManager;
 import com.cn.by.service.SysRoleService;
 import com.cn.by.util.LoggerUtils;
@@ -25,7 +26,7 @@ import org.springframework.web.util.UrlPathHelper;
 
 @Controller
 @Scope(value="prototype")
-@RequestMapping("open")
+@RequestMapping("/open")
 public class CommonController extends BaseController {
 	@Resource
 	SysRoleService sysRoleService;
@@ -41,7 +42,7 @@ public class CommonController extends BaseController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("404")
+	@RequestMapping("/404")
 	public ModelAndView _404(HttpServletRequest request){
 		ModelAndView view = new ModelAndView("common/404");
 		return view;

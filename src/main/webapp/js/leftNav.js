@@ -8,9 +8,9 @@ function navBar(strData){
 	var ulHtml = '<ul class="layui-nav layui-nav-tree">';
 	for(var i=0;i<data.length;i++){
 		if(data[i].spread){
-			ulHtml += '<li class="layui-nav-item layui-nav-itemed">';
+			ulHtml += '<shiro:hasPermission name="'+data[i].permission+'"><li class="layui-nav-item layui-nav-itemed">';
 		}else{
-			ulHtml += '<li class="layui-nav-item">';
+			ulHtml += '<shiro:hasPermission name="'+data[i].permission+'"><li class="layui-nav-item">';
 		}
 		if(data[i].children != undefined && data[i].children.length > 0){
 			ulHtml += '<a href="javascript:;">';
@@ -56,7 +56,7 @@ function navBar(strData){
 			}
 			ulHtml += '<cite>'+data[i].title+'</cite></a>';
 		}
-		ulHtml += '</li>';
+		ulHtml += '</li></shiro:hasPermission>';
 	}
 	ulHtml += '</ul>';
 	return ulHtml;
