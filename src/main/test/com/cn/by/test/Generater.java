@@ -1,4 +1,4 @@
-package com.cn.by.util;
+package com.cn.by.test;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
